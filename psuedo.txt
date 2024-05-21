@@ -39,3 +39,8 @@ Increment Score {
     You Win {User incremenet point by 1
     }
 }
+
+
+Play round function (human choice, computer choice)(
+
+)
