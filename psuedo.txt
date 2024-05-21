@@ -1,0 +1,41 @@
+Rock Paper Scissors
+
+Declare Computer choice
+Declare Player Choice
+Delcare Rock = 0
+Declare Paper = 1
+Declare Scissors = 2
+
+Generate Computer Choice (random number)
+    Random Number in range (0-2)
+return string( "Rock","Paper", "Scissors")
+
+Check Human input (Rock) {
+     Declare  Human choice = "Rock", "Paper", "Scissors"
+    
+    If Human input === Computer Choice  (
+        Print "Tie"
+    ) Else if Human input = "Rock" & Computer Choice = "Paper"(
+        Print "You Lose"
+        Incremenet Computer score
+    ) Else if Human input = "Paper" & Computer Choice = "Scissors" (
+        Print "You Lose"
+        Increment Coputer Score
+    ) Else if Human Input = "Scissors" & Computer Choice = "Rock"(
+        Print "You Lose"
+        Incremenet Computer Score
+    ) else (
+        Print "You Win!"
+        Increment User Score.
+    )
+    
+)
+
+
+Increment Score {
+    You Lose {Computer increment Point by 1
+    }
+
+    You Win {User incremenet point by 1
+    }
+}
