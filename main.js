@@ -7,7 +7,7 @@ let computerScore = 0;
 
 //verifying the user's input so that it works in the later function.
 function getPlayerChoice(){
-    let y = prompt("Choose your weapon (Rock, Paper, or Scissors): ").toLowerCase();
+let y = prompt("Choose your weapon (Rock, Paper, or Scissors): ").toLowerCase();
         if (y === "rock"){
             console.log ("You chose "+y);
         } else if (y === "scissors"){
@@ -43,43 +43,61 @@ function getComputerChoice(){
    
 };
 
-
+function fullGame(){
 // assign the above functions to variables
 const playerChoice = getPlayerChoice();
 
 const computerChoice = getComputerChoice();
 //compare variables to see who wins and increment score.
 function playRound(){
-    if (playerChoice === computerChoice){
-        console.log("It's a Tie game!");
-    } else if (playerChoice === "scissors" && computerChoice === "rock") {
-        console.log("The rock smashes your scissors! You Lose!");
-        computerScore++;
-    } else if (playerChoice === "rock" && computerChoice === "paper"){
-        console.log("The paper covers your rock! You Lose!");
-        computerScore++;
-    } else if (playerChoice === "paper" && computerChoice ==="scissors") {
-        console.log(" The Scissors cut your paper! You Lose!");
-        computerScore++;
-    } else {
-        console.log("You frickin did it! You win!")
-        playerScore++;
-    }
+        if (playerChoice === computerChoice){
+            console.log("It's a Tie game!");
+        } else if (playerChoice === "scissors" && computerChoice === "rock") {
+            console.log("The rock smashes your scissors! You Lose!");
+            computerScore++;
+        } else if (playerChoice === "rock" && computerChoice === "paper"){
+            console.log("The paper covers your rock! You Lose!");
+            computerScore++;
+        } else if (playerChoice === "paper" && computerChoice ==="scissors") {
+            console.log(" The Scissors cut your paper! You Lose!");
+            computerScore++;
+        } else {
+            console.log("You frickin did it! You win!")
+            playerScore++;
+        }
+    } // Need to return something useful for the parameters.
+    playRound();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+    getPlayerChoice();
+    getComputerChoice();
+    playRound();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+    getPlayerChoice();
+    getComputerChoice();
+    playRound();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+    getPlayerChoice();
+    getComputerChoice();
+    playRound();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+    getPlayerChoice();
+    getComputerChoice();
+    playRound();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 };
-
-function fullGame(){
-    for (var i= 0; i < 5; i++){
-        console.log(playerChoice);
-        console.log(computerChoice);
-        playRound();
-        alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-    }
-};
+// function fullGame(){
+//     for (var i= 0; i < 5; i++){
+//         console.log(playerChoice);
+//         console.log(computerChoice);
+//         playRound();
+//         alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+//     }
+// };
 
 // console.log(playerChoice);
 // console.log(computerChoice);
-// playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+fullGame();
+alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // playRound();
 // alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // playRound();
@@ -87,16 +105,16 @@ function fullGame(){
 // playRound();
 // alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 
-function declareWinner(){
-    if (playerScore > computerScore){
-        alert("You Win!");
-    } else if (playerScore === computerScore) {
-        alert ("It's a tie!");
-    } else (playerScore < computerScore){
-        alert ("You lost!");
-    }
-}
+// function declareWinner(){
+//     if (playerScore > computerScore){
+//         alert("You Win!");
+//     } else if (playerScore === computerScore) {
+//         alert ("It's a tie!");
+//     } else {
+//         alert ("You lost!");
+//     }
+// }
 
-declareWinner();
+// declareWinner();
 
 
