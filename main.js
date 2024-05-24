@@ -43,11 +43,10 @@ function getComputerChoice(){
    
 };
 
-function fullGame(){
 // assign the above functions to variables
-const playerChoice = getPlayerChoice();
+let playerChoice = getPlayerChoice();
 
-const computerChoice = getComputerChoice();
+let computerChoice = getComputerChoice();
 //compare variables to see who wins and increment score.
 function playRound(){
         if (playerChoice === computerChoice){
@@ -66,25 +65,46 @@ function playRound(){
             playerScore++;
         }
     } // Need to return something useful for the parameters.
+//     playRound();
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+//     getPlayerChoice();
+//     getComputerChoice();
+    function fullGame(){
     playRound();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-    getPlayerChoice();
-    getComputerChoice();
+    console.log (playerScore);
+    console.log (computerScore);
+    //Update player choice and computer choice values.
+    playerChoice = getPlayerChoice();
+    computerChoice = getComputerChoice();
     playRound();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-    getPlayerChoice();
-    getComputerChoice();
+    console.log(playerScore);
+    console.log(computerScore);
+    playerChoice = getPlayerChoice();
+    computerChoice = getComputerChoice();
     playRound();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-    getPlayerChoice();
-    getComputerChoice();
+    console.log(playerScore);
+    console.log(computerScore);
+    playerChoice = getPlayerChoice();
+    computerChoice = getComputerChoice();
     playRound();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-    getPlayerChoice();
-    getComputerChoice();
-    playRound();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-};
+    console.log(playerScore);
+    console.log(computerScore);
+    }
+
+fullGame();
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+//     getPlayerChoice();
+//     getComputerChoice();
+//     playRound();
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+//     getPlayerChoice();
+//     getComputerChoice();
+//     playRound();
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+//     getPlayerChoice();
+//     getComputerChoice();
+//     playRound();
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // function fullGame(){
 //     for (var i= 0; i < 5; i++){
 //         console.log(playerChoice);
@@ -94,10 +114,8 @@ alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 //     }
 // };
 
-// console.log(playerChoice);
-// console.log(computerChoice);
-fullGame();
-alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
+
+// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // playRound();
 // alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // playRound();
@@ -105,16 +123,16 @@ alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 // playRound();
 // alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 
-// function declareWinner(){
-//     if (playerScore > computerScore){
-//         alert("You Win!");
-//     } else if (playerScore === computerScore) {
-//         alert ("It's a tie!");
-//     } else {
-//         alert ("You lost!");
-//     }
-// }
+function declareWinner(){
+    if (playerScore > computerScore){
+        alert("You Win!");
+    } else if (playerScore === computerScore) {
+        alert ("It's a tie!");
+    } else {
+        alert ("You lost!");
+    }
+}
 
-// declareWinner();
+declareWinner();
 
 

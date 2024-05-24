@@ -29,7 +29,7 @@ Check Human input (Rock) {
         Increment User Score.
     )
     
-)
+}
 
 
 Increment Score {
