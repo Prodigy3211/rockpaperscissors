@@ -1,9 +1,7 @@
-console.log("hello world");
-
-// const x = [rock,paper,scissors];
+//declare starting scores
 let playerScore = 0;
 let computerScore = 0;
-// let y = prompt("Choose your weapon (Rock, Paper, or Scissors): ").toLowerCase();
+
 
 //verifying the user's input so that it works in the later function.
 function getPlayerChoice(){
@@ -18,7 +16,6 @@ let y = prompt("Choose your weapon (Rock, Paper, or Scissors): ").toLowerCase();
             console.log("ERROR Please choose rock, paper, or scissors");
         }
         return y;
-
 };
 
 //let computer choose a number at random
@@ -64,64 +61,34 @@ function playRound(){
             console.log("You frickin did it! You win!")
             playerScore++;
         }
-    } // Need to return something useful for the parameters.
-//     playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-//     getPlayerChoice();
-//     getComputerChoice();
+    }
+
+// play a round using the code above
+
     function fullGame(){
-    playRound();
-    console.log (playerScore);
-    console.log (computerScore);
+        playRound();
+            console.log (playerScore);
+            console.log (computerScore);
     //Update player choice and computer choice values.
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-    playRound();
-    console.log(playerScore);
-    console.log(computerScore);
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-    playRound();
-    console.log(playerScore);
-    console.log(computerScore);
-    playerChoice = getPlayerChoice();
-    computerChoice = getComputerChoice();
-    playRound();
-    console.log(playerScore);
-    console.log(computerScore);
+                playerChoice = getPlayerChoice();
+                computerChoice = getComputerChoice();
+        playRound();
+            console.log(playerScore);
+            console.log(computerScore);
+                playerChoice = getPlayerChoice();
+                computerChoice = getComputerChoice();
+        playRound();
+            console.log(playerScore);
+            console.log(computerScore);
+                playerChoice = getPlayerChoice();
+                computerChoice = getComputerChoice();
+        playRound();
+            console.log(playerScore);
+            console.log(computerScore);
     }
 
 fullGame();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-//     getPlayerChoice();
-//     getComputerChoice();
-//     playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-//     getPlayerChoice();
-//     getComputerChoice();
-//     playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-//     getPlayerChoice();
-//     getComputerChoice();
-//     playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-// function fullGame(){
-//     for (var i= 0; i < 5; i++){
-//         console.log(playerChoice);
-//         console.log(computerChoice);
-//         playRound();
-//         alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-//     }
-// };
 
-
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-// playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-// playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
-// playRound();
-// alert("Player Score is: "+playerScore+ "\nComputer Score is: "+computerScore);
 
 function declareWinner(){
     if (playerScore > computerScore){
