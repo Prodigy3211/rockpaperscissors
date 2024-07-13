@@ -43,7 +43,9 @@ function getComputerChoice(){
 function playGame(playerChoice) {
     const computerChoice = getComputerChoice();
     const scoreCard = choiceComparison(playerChoice,computerChoice);
+    // const winner = declareWinner(playerScore, computerScore);
     scoreBoard(playerChoice, computerChoice, scoreCard);
+    declareWinner(playerScore,computerScore);
 }
 
 //function to compare choices and give a score
@@ -56,11 +58,16 @@ function choiceComparison(playerChoice, computerChoice){
         (playerChoice === "paper" && computerChoice === "rock") ||
         (playerChoice === "scissors" && computerChoice === "paper")
     ) {
+        playerScore++;
         return "You fricking did it! You Win!";
     } else {
+        computerScore++;
         return "You LOST! Dang..."
     }
+
 }
+
+
 
 function scoreBoard (playerChoice, computerChoice, scoreCard) {
     const resultDiv = document.getElementById('scoreCard');
@@ -68,10 +75,26 @@ function scoreBoard (playerChoice, computerChoice, scoreCard) {
     You chose: ${playerChoice}<br>
     Computer chose: ${computerChoice}<br>
     <br>${scoreCard}
+    <br>Player Score: ${playerScore} Computer Score: ${computerScore}
     `;
 }
 
 });
+
+//function to Alert Winner
+
+function declareWinner(playerScore , computerScore) {
+   
+    if (playerScore >= 5 && computerScore < 5 ){
+        alert ("You Win the Game!");
+    } else if (playerScore < 5 && computerScore >= 5){
+        alert ("The Computer wins this game!")
+    } else {
+        
+    }
+};
+
+declareWinner();
 
 // buttonScissors.addEventListener("click", () => {
 //     let y = buttonRock.value;
