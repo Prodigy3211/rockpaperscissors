@@ -65,8 +65,8 @@ function choiceComparison(playerChoice, computerChoice){
 function scoreBoard (playerChoice, computerChoice, scoreCard) {
     const resultDiv = document.getElementById('scoreCard');
     resultDiv.innerHTML = `
-    <p> You chose: ${playerChoice}</p>
-    <br>Computer chose: ${computerChoice}
+    You chose: ${playerChoice}<br>
+    Computer chose: ${computerChoice}<br>
     <br>${scoreCard}
     `;
 }
